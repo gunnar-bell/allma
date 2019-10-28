@@ -1,0 +1,34 @@
+svg {
+  border: 3px solid red;
+}
+
+.census_block {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .005px;
+}
+
+.census_block:hover {
+  fill: red;
+}
+
+.county-025 {
+  stroke: #4281A4;
+}
+
+.county-021 {
+  stroke: #4281A4;
+}
+
+.county-017 {
+  stroke: #4281A4;
+}
+
+/*.svg-container { 
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; 
+  vertical-align: middle; 
+  overflow: hidden; 
+}*/
