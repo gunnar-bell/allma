@@ -1,15 +1,13 @@
-FROM node:10
-
-WORKDIR /usr/src/app
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# build stage
+FROM node:lts-alpine as build-stage
+WORKDIR /app
 COPY package*.json ./
-
-RUN npm install
-
+RUN npm install --production
 COPY . .
+RUN npm run build
 
-EXPOSE 3000
-CMD ["npm", "run", "start"]
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

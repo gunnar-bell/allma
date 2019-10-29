@@ -1,24 +1,26 @@
-# allma
+# allma exercise
 
-## Project setup
+## Prerequisites:
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+docker
+yarn
 ```
 
-### Compiles and minifies for production
+## Setup and Run the Example:
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+git clone git@github.com:gbell123/allma.git;
+cd allma;
+yarn install;
+docker-compose up;
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## "Vanilla" if you have any issues:
+```
+git clone git@github.com:gbell123/allma.git;
+cd allma;
+yarn install;
+yarn serve;
+```
+
+## After one of the above options
+Navigate to localhost:8080
